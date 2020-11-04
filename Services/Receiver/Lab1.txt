@@ -1,0 +1,172 @@
+openapi: 3.0.0
+# Added by API Auto Mocking Plugin
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ACIT-3855-AndrewYu/Game_Queue_Recordings/1.0.0
+info:
+  description: This API receives queue events from game zones
+  version: "1.0.0"
+  title: Queue Server API
+  contact:
+    email: eyu47@my.bcit.ca
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: server
+    description: regions available for players
+paths:
+  /queue/zone1:
+    get:
+      tags:
+        - server
+      summary: reports number of players in zone 1
+      operationId: app.report_number_player_zone1
+      description: |
+        Records the total number of players in zone 1, and whether the player id is in zone 1
+      parameters:
+        - in: query
+          name: searchString
+          description: player ids for zone 1
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: limit
+          description: maximum number of players to return
+          schema:
+            type: integer
+            format: int32
+            minimum: 0
+            maximum: 100000
+      responses:
+        '200':
+          description: players added to zone 1
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Zone1'
+        '400':
+          description: bad input parameter
+    post:
+      tags:
+        - server
+      summary: reports number of players needs to be added to zone 1
+      operationId: app.report_number_players_zone1
+      description: Adds number of players to zone 1 total number of players
+      responses:
+        '201':
+          description: players added to zone 1
+        '400':
+          description: 'invalid input, object invalid'
+        '409':
+          description: number of players exceeds maximum amount
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Zone1'
+        description: player numbers to add
+  /queue/zone2:
+    get:
+      tags:
+        - server
+      summary: reports number of players in zone 2
+      operationId: app.report_number_player_zone2
+      description: |
+        Records the total number of players in zone 2, and whether the player id is in zone 2
+      parameters:
+        - in: query
+          name: searchString
+          description: player ids for zone 2
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: limit
+          description: maximum number of players to return
+          schema:
+            type: integer
+            format: int32
+            minimum: 0
+            maximum: 500000
+      responses:
+        '200':
+          description: players added to zone 2
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Zone2'
+        '400':
+          description: bad input parameter
+    post:
+      tags:
+        - server
+      summary: reports number of players needs to be added to zone 2
+      operationId: app.report_number_players_zone2
+      description: Adds number of players to zone 2 total number of players
+      responses:
+        '201':
+          description: players added to zone 2
+        '400':
+          description: 'invalid input, object invalid'
+        '409':
+          description: number of players exceeds maximum amount
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Zone2'
+        description: player numbers to add
+components:
+  schemas:
+    Zone1:
+      type: object
+      required:
+        - id
+        - rank
+        - number of players in total
+        - timestamp
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        rank:
+          type: string
+          example: Gold
+        number of players in total:
+          type: integer
+          format: int32
+          example: 51342
+        timestamp:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+    Zone2:
+      type: object
+      required:
+        - id
+        - rank
+        - number of players in total
+        - timestamp
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        rank:
+          type: string
+          example: Gold
+        number of players in total:
+          type: integer
+          format: int32
+          example: 51342
+        timestamp:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'

@@ -1,0 +1,101 @@
+openapi: 3.0.0
+# servers:
+#   - description: SwaggerHub API
+#     url: https://virtserver.swaggerhub.com/ACIT-3855-AndrewYu/Game_Queue_Recordings/1.0.0
+info:
+  description: This API receives queue events from game zones
+  version: "1.0.0"
+  title: Queue Server API
+  contact:
+    email: eyu47@my.bcit.ca
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: server
+    description: regions available for players
+paths:
+  /queue/zone1:
+    post:
+      tags:
+        - server
+      summary: reports number of players needs to be added to zone 1
+      operationId: app.report_number_player_zone1
+      description: Adds number of players to zone 1 total number of players
+      responses:
+        '201':
+          description: players added to zone 1
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Zone1'
+        description: player numbers to add
+  /queue/zone2:
+    post:
+      tags:
+        - server
+      summary: reports number of players needs to be added to zone 2
+      operationId: app.report_number_player_zone2
+      description: Adds number of players to zone 2 total number of players
+      responses:
+        '201':
+          description: players added to zone 2
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Zone2'
+        description: player numbers to add
+components:
+  schemas:
+    Zone1:
+      type: object
+      required:
+        - player_id
+        - ranking
+        - num_player_total
+        - timestamp
+      properties:
+        player_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        ranking:
+          type: string
+          example: Gold
+        num_player_total:
+          type: integer
+          format: int32
+          example: 51342
+        timestamp:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+    Zone2:
+      type: object
+      required:
+        - player_id
+        - ranking
+        - num_player_total
+        - timestamp
+      properties:
+        player_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        ranking:
+          type: string
+          example: Gold
+        num_player_total:
+          type: integer
+          format: int32
+          example: 51342
+        timestamp:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'

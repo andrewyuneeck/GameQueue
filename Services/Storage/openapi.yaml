@@ -1,0 +1,131 @@
+openapi: 3.0.0
+# servers:
+#   - description: SwaggerHub API
+#     url: https://virtserver.swaggerhub.com/ACIT-3855-AndrewYu/Game_Queue_Recordings/1.0.0
+info:
+  description: This API receives queue events from game zones
+  version: "1.0.0"
+  title: Queue Server API
+  contact:
+    email: eyu47@my.bcit.ca
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: server
+    description: regions available for players
+paths:
+  /queue/zone1:
+    get:
+      tags:
+        - server
+      summary: gets number of players in zone 1
+      operationId: app.get_number_player_zone1
+      description: Gets number of players in zone 1 after a timestamp
+      parameters:
+        - name: timestamp
+          in: query
+          description: Limits the number of items on a page
+          schema:
+            type: string
+            format: date-time
+            example: '2016-08-29T09:12:33Z'
+      responses:
+        '200':
+          description: Successfully return a list of players in zone 1
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Zone1'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string    
+  /queue/zone2:
+    get:
+      tags:
+        - server
+      summary: gets number of players in zone 2
+      operationId: app.get_number_player_zone2
+      description: Gets number of players in zone 2 after a timestamp
+      parameters:
+        - name: timestamp
+          in: query
+          description: Limits the number of items on a page
+          schema:
+            type: string
+            format: date-time
+            example: '2016-08-29T09:12:33Z'
+      responses:
+        '200':
+          description: Successfully return a list of players in zone 2
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Zone2'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string    
+components:
+  schemas:
+    Zone1:
+      type: object
+      required:
+        - player_id
+        - ranking
+        - num_player_total
+        - timestamp
+      properties:
+        player_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        ranking:
+          type: string
+          example: Gold
+        num_player_total:
+          type: integer
+          format: int32
+          example: 51342
+        timestamp:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33Z'
+    Zone2:
+      type: object
+      required:
+        - player_id
+        - ranking
+        - num_player_total
+        - timestamp
+      properties:
+        player_id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        ranking:
+          type: string
+          example: Gold
+        num_player_total:
+          type: integer
+          format: int32
+          example: 51342
+        timestamp:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33Z'

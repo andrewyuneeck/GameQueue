@@ -1,0 +1,8 @@
+Description:
+This is an application that receives records the flow of players playing in different zone and assigns players to different zones in a game.
+The events are two types of zones, Zone 1 for higher rank players and Zone 2 for the rest. For Zone 1, we expect to have maximum flow of 100000 queue requests per second, while Zone 2 expects maximum flow of 500000 queue requests per second.
+The quests are stored to allow the following:
+* Administrators to view numbers of each Zone to determine the maximum flow of each zone
+* Analysis of time at peak hour during days of a week
+* Recorded data across different zone players to avoid crowd traffic
+Users of the system are administrators (who controls the game server), shareholders (who makes decision of what to change for the game) and players (who plays the game).

@@ -1,0 +1,60 @@
+2020-10-29 16:27:19,021 - basicLogger - INFO - Retrieving Zone1 stats at index 1
+2020-10-29 16:27:19,579 - basicLogger - ERROR - Could not find Zone1 report at index 1
+2020-10-29 16:27:28,292 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 16:27:28,854 - basicLogger - ERROR - Could not find Zone1 report at index 0
+2020-10-29 16:27:40,283 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 16:27:40,836 - basicLogger - ERROR - Could not find Zone2 report at index 0
+2020-10-29 16:30:30,676 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 16:30:30,843 - basicLogger - ERROR - Could not find Zone2 report at index 0
+2020-10-29 16:30:52,008 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 16:30:53,072 - basicLogger - ERROR - Could not find Zone2 report at index 0
+2020-10-29 16:32:15,617 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 16:32:16,178 - basicLogger - ERROR - Could not find Zone1 report at index 0
+2020-10-29 16:32:25,188 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 16:32:26,251 - basicLogger - ERROR - Could not find Zone2 report at index 0
+2020-10-29 16:36:34,406 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 16:36:35,460 - basicLogger - ERROR - Could not find Zone2 report at index 0
+2020-10-29 16:50:44,345 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 16:50:46,484 - basicLogger - ERROR - Could not find Zone1 report at index 0
+2020-10-29 16:56:31,822 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 16:56:33,869 - basicLogger - ERROR - Could not find Zone2 report at index 0
+2020-10-29 17:07:34,164 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 17:07:36,266 - basicLogger - ERROR - Could not find Zone1 report at index 0
+2020-10-29 17:15:47,424 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 17:15:49,483 - basicLogger - ERROR - Could not find Zone2 report at index 0
+2020-10-29 17:16:46,126 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 17:16:48,298 - basicLogger - ERROR - Could not find Zone2 report at index 0
+2020-10-29 17:17:25,569 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 17:19:26,502 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 17:19:28,722 - basicLogger - ERROR - Could not find Zone1 report at index 0
+2020-10-29 17:26:53,136 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 17:26:55,349 - basicLogger - ERROR - Could not find Zone1 report at index 0
+2020-10-29 17:27:28,522 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 17:27:30,694 - basicLogger - ERROR - Could not find Zone1 report at index 0
+2020-10-29 17:31:15,508 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 17:31:17,646 - basicLogger - ERROR - Could not find Zone1 report at index 0
+2020-10-29 17:37:19,684 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 17:38:11,920 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 17:38:13,979 - basicLogger - ERROR - Could not find Zone2 report at index 0
+2020-10-29 17:38:20,395 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 17:39:31,942 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 17:39:34,015 - basicLogger - ERROR - Could not find Zone2 report at index 0
+2020-10-29 17:39:43,837 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 17:40:08,921 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 17:55:51,767 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 17:56:01,223 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 17:56:01,773 - basicLogger - ERROR - Could not find Zone2 report at index 0
+2020-10-29 18:31:27,132 - basicLogger - INFO - Retrieving Zone1 stats at index 0
+2020-10-29 18:32:05,372 - basicLogger - INFO - Retrieving Zone1 stats at index 3
+2020-10-29 18:32:14,125 - basicLogger - INFO - Retrieving Zone1 stats at index 20
+2020-10-29 18:32:23,410 - basicLogger - INFO - Retrieving Zone1 stats at index 2000
+2020-10-29 18:32:23,968 - basicLogger - ERROR - Could not find Zone1 report at index 2000
+2020-10-29 18:32:35,990 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 18:32:36,550 - basicLogger - ERROR - Could not find Zone2 report at index 0
+2020-10-29 18:36:35,531 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 18:36:56,351 - basicLogger - INFO - Retrieving Zone2 stats at index 2
+2020-10-29 18:36:56,911 - basicLogger - ERROR - Could not find Zone2 report at index 2
+2020-10-29 18:37:22,942 - basicLogger - INFO - Retrieving Zone2 stats at index 0
+2020-10-29 18:37:28,780 - basicLogger - INFO - Retrieving Zone2 stats at index 2
+2020-10-29 18:37:38,307 - basicLogger - INFO - Retrieving Zone2 stats at index 2000
+2020-10-29 18:37:38,867 - basicLogger - ERROR - Could not find Zone2 report at index 2000

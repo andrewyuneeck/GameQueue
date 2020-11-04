@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  description: This API provides event stat of the game
+  version: 1.0.0
+  title: Stats API
+  contact:
+    email: eyu47@my.bcit.ca
+paths:
+  /stats:
+    get:
+      summary: Gets the event stats
+      operationId: app.get_stats
+      description: Gets Zone 1 and Zone 2 queue statistics
+      responses:
+        '200':
+          description: Successfully returned a list of zones status events
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/ReadingStats'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+components:
+  schemas:
+    ReadingStats:
+      required:
+      - num_requests_zone1
+      - num_requests_zone2
+      - num_most_players_rank_zone1
+      - num_most_players_rank_zone2
+      properties:
+        num_requests_zone1:
+          type: integer
+          example: 18
+        num_requests_zone2:
+          type: integer
+          example: 23
+        num_most_players_rank_zone1:
+          type: integer
+          example: 7
+        num_most_players_rank_zone2:
+          type: integer
+          example: 1
+      type: object

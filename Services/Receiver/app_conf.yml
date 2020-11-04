@@ -1,0 +1,9 @@
+version: 1
+zone1:
+    url: http://localhost:8090/queue/zone1
+zone2:
+    url: http://localhost:8090/queue/zone2
+events:
+    hostname: acit3855-lab6-docker.westus2.cloudapp.azure.com
+    port: 9092
+    topic: events
