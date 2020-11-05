@@ -8,7 +8,6 @@ import os.path
 import logging
 import logging.config
 import requests
-import pymysql
 from apscheduler.schedulers.background import BackgroundScheduler
 
 with open('app_conf.yml', 'r') as f:     
