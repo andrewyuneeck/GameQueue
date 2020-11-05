@@ -4,7 +4,6 @@ import json
 import yaml
 import logging
 import logging.config
-import requests
 from pykafka import KafkaClient, SslConfig
 from threading import Thread
 from pykafka.common import OffsetType
