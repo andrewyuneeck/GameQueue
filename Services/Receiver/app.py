@@ -1,7 +1,6 @@
 import connexion
 from connexion import NoContent
 
-from base import Base
 import datetime
 import json
 import yaml
